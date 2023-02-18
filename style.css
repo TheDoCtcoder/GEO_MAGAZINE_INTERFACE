@@ -557,11 +557,11 @@ p {
     position: relative;
     display: flex;
     width: 80vw;
-    background-color: #eb1717;
+    /* background-color: #eb1717; */
   }
 
   .pimage {
-    background-color: #1abd43;
+    /* background-color: #1abd43; */
     margin: 0;
   }
   .pimage div img {
