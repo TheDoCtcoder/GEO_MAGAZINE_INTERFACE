@@ -1,0 +1,703 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+}
+
+a::after {
+  background-color: transparent;
+  background-color: #1abd43;
+  content: "";
+  height: 2px;
+  width: 0%;
+  position: absolute;
+  left: 50%;
+  top: 25px;
+  transform: translateX(-50%);
+  transition: width 0.4s ease-in;
+}
+
+a:hover::after {
+  background-color: #75ab1b;
+  width: 100%;
+}
+
+a:active {
+  background-color: #75ab1b;
+  color: white;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+li {
+  position: relative;
+  padding-left: 10px;
+  color: #181918;
+  list-style: none;
+  padding-right: 10px;
+}
+
+li:hover {
+  color: #70ab10;
+}
+
+ul {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 60px;
+  border-bottom: #1abd43 1px solid;
+}
+
+.container ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  justify-content: space-between;
+  width: 100vw;
+  /* border-bottom: 1px solid  #70ab10 ; */
+  padding-bottom: 5px;
+}
+
+img {
+  margin-top: 10px;
+  width: 10%;
+}
+
+button.connect {
+  font-weight: 600;
+  height: 40px;
+  padding: 10px;
+  background-color: #70ab10;
+  border: 0px;
+  color: white;
+}
+
+button.bmagazine {
+  font-weight: 700;
+  height: 40px;
+  padding: 10px;
+  background-color: white;
+  border: 0px;
+  color: #70ab10;
+}
+
+.droite {
+  display: flex;
+  flex-wrap: wrap;
+  padding-right: 30px;
+}
+
+button.menu {
+  top: -15px;
+  position: relative;
+  padding: 10px;
+  font-weight: 700;
+  height: 40px;
+  color: black;
+  border: 0px;
+  background-color: white;
+}
+
+button.menusearch {
+  font-weight: 700;
+  height: 40px;
+  position: relative;
+  top: -5px;
+  background-color: white;
+  border: 0px;
+  color: #111111;
+}
+
+button.menu img {
+  bottom: -5px;
+  padding-right: 10px;
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+
+.gauche {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 15px;
+}
+
+button.menu:hover,
+button.menusearch:hover {
+  color: #75ab1b;
+}
+
+.centre img {
+  width: 100px;
+}
+
+#survol {
+  display: none;
+  color: #111111;
+  position: relative;
+  top: 3px;
+  width: 100vw;
+  height: 250px;
+  background-color: #75ab1b;
+}
+
+.sgauche {
+  height: 100%;
+  color: white;
+  width: 50%;
+  background-color: #2c2929;
+  border-right: white 1px solid;
+}
+
+.sdroite {
+  height: 100%;
+  color: white;
+  width: 50%;
+  background-color: #2c2929;
+}
+
+p {
+  margin-top: 10px;
+  padding-left: 10px;
+}
+
+.pgauche {
+  position: relative;
+  z-index: 1;
+}
+
+.pdroite {
+  position: relative;
+  z-index: 1;
+}
+
+.pgauche::after {
+  z-index: -1;
+  content: "";
+  bottom: 0px;
+  position: absolute;
+  width: 100%;
+  background-color: #70ab10;
+  color: white;
+  transform: translateX(-100%);
+  transition: all 0.4s ease-in-out;
+  height: 5%;
+}
+
+.pdroite::after {
+  z-index: -1;
+  content: "";
+  bottom: 0px;
+  position: absolute;
+  width: 100%;
+  background-color: #70ab10;
+  color: white;
+  transform: translateX(-100%);
+  transition: all 0.4s ease-in-out;
+  height: 5%;
+}
+
+.pdroite:hover::after {
+  height: 100%;
+}
+
+.pgauche:hover::after {
+  height: 100%;
+}
+
+.pdroite span {
+  position: relative;
+  z-index: 1;
+}
+
+.pgauche span {
+  position: relative;
+  z-index: 1;
+}
+
+.sgauche p {
+  text-align: center;
+  font-weight: 600;
+  font-family: "Playfair Display", serif;
+}
+
+.sdroite p {
+  text-align: center;
+  font-weight: 600;
+  font-family: "Playfair Display", serif;
+}
+
+.sdroite {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sgauche {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pligne2 {
+  width: 70%;
+  color: white;
+}
+
+.pligne {
+  width: 30%;
+}
+
+.zoom {
+  margin-top: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.pimage {
+  width: 60%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.pimage img {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: auto;
+  transition: all 0.8s ease-in-out;
+}
+
+.pimage img:hover {
+  width: 100%;
+  overflow: hidden;
+  transform: scale(1.1);
+}
+
+.para {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%); 
+  /* transform: translateY(30%);  */
+  background-color: rgba(11, 11, 11, 0.6);
+  padding: 10px;
+}
+
+.para p {
+  text-align: left;
+  width: 100%;
+  font-weight: 800;
+  color: #f7eded;
+  font-size: 1.8rem;
+}
+
+.alaune {
+  padding-top: 20px;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.alaune p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+}
+
+.alaune p span {
+  padding-right: 10px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 42px;
+  font-weight: 300;
+}
+
+.alaune p span::after {
+  margin-left: 5px;
+  content: "";
+  color: #70ab10;
+  height: 50%;
+  background-color: #70ab10;
+  position: absolute;
+  width: 6px;
+  bottom: 5px;
+}
+
+.alauneimage {
+  padding-top: 15px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-bottom: 15px;
+}
+
+.alauneimage img {
+  padding-right: 10px;
+  width: 400px;
+  height: 200px;
+  transition: all 0.7s ease-in-out;
+}
+
+.alauneimage img:hover {
+  transform: scale(1.1);
+}
+
+.alauneimage p {
+  max-width: 380px;
+  font-family: "Playfair Display", serif;
+  font-size: 1.4rem;
+  color: #111111;
+  text-align: left;
+  font-weight: 500;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.avant::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: #75ab1b;
+}
+
+.titrevoyage {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 42px;
+}
+
+.voyage p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 42px;
+  font-weight: 400;
+}
+
+.voyage {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+  padding-top: 5px;
+}
+
+.titrevoyage {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.titrevoyage p:first-child {
+  position: relative;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 42px;
+}
+
+.contenuvoyage {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 65vw;
+  align-items: center;
+  overflow: hidden;
+}
+
+.voy {
+  width: 65vw;
+  overflow: hidden;
+}
+
+.voy img {
+  width: 100%;
+  height: 100%;
+  transition: all 0.8s ease-in-out;
+}
+
+.voy img:hover {
+  transform: scale(1.1);
+}
+
+.contenuvoyage p {
+  margin: 0 auto;
+  max-width: 750px;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-size: 38px;
+  font-weight: 600;
+  color: #151414;
+  padding-bottom: 10px;
+}
+
+.divers {
+  margin: 0 auto;
+  width: 80vw;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.vi {
+  width: 400px;
+  height: 200px;
+  overflow: hidden;
+  margin-right: 10px;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.vi img {
+  margin: 0;
+  width: 400px;
+  height: 300px;
+  padding: 0;
+  transition: all 0.8s ease-in-out;
+}
+
+.vi img:hover {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 300px;
+  transform: scale(1.1);
+}
+
+.divers p {
+  padding: 0;
+  font-family: "Playfair Display", serif;
+  max-width: 350px;
+  font-size: 1em;
+}
+
+@media screen and (max-width: 1085px) {
+  .titrevoyage p:first-child {
+    font-size: 30px;
+  }
+
+  .titrevoyage p {
+    font-size: 30px;
+  }
+
+  .para p {
+    width: 100%;
+
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 841px) {
+  .titrevoyage p:first-child {
+    font-size: 20px;
+  }
+
+  .titrevoyage p {
+    font-size: 20px;
+  }
+
+  .pimage img {
+    width: 100%;
+  }
+
+  .pimage {
+    width: 100%;
+  }
+
+  .para p {
+    width: 100%;
+
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 619px) {
+  body {
+    background-color: rgb(250, 250, 252);
+  }
+
+  .zoom {
+    /* margin: 0; */
+    position: relative;
+    display: flex;
+    width: 80vw;
+    background-color: #eb1717;
+  }
+
+  .pimage {
+    background-color: #1abd43;
+    margin: 0;
+  }
+  .pimage div img {
+    margin: 0;
+    width: 100%;
+  }
+
+.para {
+    width: 80%;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+  .para p {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 1rem;
+
+    /* display: flex;
+    flex-direction: column; */
+  }
+
+  .container ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .pligne {
+    width: 80%;
+  }
+
+  .pligne2 {
+    width: 100%;
+  }
+
+  .droite {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 60px;
+  }
+
+  .gauche {
+    padding-right: 30px;
+  }
+
+  .header {
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #survol {
+    height: 210px;
+    background-color: #2c2222;
+  }
+
+  .sgauche {
+    justify-content: flex-start;
+  }
+
+  .sdroite {
+    justify-content: flex-start;
+  }
+
+  .alaune {
+    padding-top: 20px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .alaune p span {
+    font-size: 20px;
+  }
+
+  .alaune p {
+    font-size: 20px;
+  }
+
+  .contenuvoyage p {
+    font-size: 20px;
+  }
+
+  @media screen and (max-width: 841px) {
+    .titrevoyage p:first-child {
+      font-size: 15px;
+    }
+
+    .titrevoyage p {
+      font-size: 15px;
+    }
+
+    .pimage img {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 962px) {
+  .pimage img {
+    width: 90%;
+  }
+
+  .alaune {
+    padding-top: 20px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .alaune p span {
+    font-size: 20px;
+  }
+
+  .alaune p {
+    font-size: 20px;
+  }
+
+  .para p {
+    font-size: 1rem;
+}
+}
+
+
+@media screen and   ( max-width: 1474px) {
+    .para p {
+        font-size: 1.3rem;
+    }
+}
+@media screen and   ( max-width: 1060px) {
+    .para p {
+        font-size: 1.1rem;
+    }
+}

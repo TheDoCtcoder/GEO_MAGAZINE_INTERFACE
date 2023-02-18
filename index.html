@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <script src="script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet" />
+  <title>GEO</title>
+</head>
+
+<body>
+  <div>
+    <div class="header">
+      <div class="gauche">
+        <button class="menu">
+          <span><img src="./menu-icon.svg" alt="" /></span>
+          <span> MENU</span></button><button class="menusearch">
+          <span><img src="./icons8-search.svg" alt="" srcset="" /></span>
+          <span>RECHERCHER</span>
+        </button>
+      </div>
+      <div class="centre">
+        <img src="geo.svg" alt="" srcset="" />
+      </div>
+      <div class="droite">
+        <button class="bmagazine">LE MAGAZINE</button>
+        <button class="connect">SE CONNECTER</button>
+      </div>
+    </div>
+    <div class="container">
+      <ul>
+        <li onmouseenter="fsurvol()">
+          <a>Voyage & Destinations</a>
+        </li>
+        <li><a>Environnement</a></li>
+        <li><a>Histoire</a></li>
+        <li><a>Aventure</a></li>
+        <li><a>Géopolitique</a></li>
+        <li><a>Bourse GEO</a></li>
+        <li><a>Vive le train !</a></li>
+      </ul>
+    </div>
+    <div id="survol" onmouseleave="ferme()">
+      <div class="sgauche">
+        <h4><span class="pgauche">PLUS DE SUJETS DE VOYAGE</span></h4>
+        <p class="pligne">
+          France : Top 10 des destinations les plus demandées pour les
+          vacances d'Hiver 2023
+        </p>
+      </div>
+      <div class="sdroite">
+        <h4><span class="pdroite">PLUS DE DESTINATIONS</span></h4>
+        <p class="pligne2">
+          Italie - Croatie - Grèce continentale - Corse - Allemagne - Suisse -
+          Belgique Malte Martinique Bretagne Massif central - Provence -
+          Charente-Maritime - Vendée - Paris - Naples et la côte almafitaine -
+          Danemark
+        </p>
+        <p class="pligne2"></p>
+      </div>
+    </div>
+    <div class="zoom">
+      <div class="pimage">
+        <div>
+        <img src="./image1.jpg" alt="" srcset="" />
+        
+        <div class="para">
+          <div>
+          <p>Qui était Nzinga Mbandi,</p>
+          <p>indétrônable reine africaine</p>
+          <p>guerrière et stratège ?</p>
+        </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="alaune">
+      <div>
+        <p><span>A LA UNE</span> A LA RENCONTRE DU MONDE</p>
+      </div>
+    </div>
+    <div class="alauneimage">
+      <div>
+        <div class="vi"><img src="./alaune1.jpg" alt="" srcset="" /></div>
+        <p>
+          Des milliers d'enfants ukrainiens placés dans des camps de
+          "rééducation" russes
+        </p>
+      </div>
+      <div>
+        <div class="vi"><img src="./alaune2.jpg" alt="" srcset="" /></div>
+        <p>
+          Pologne : La terre s'effondre dans une ancienne ville minière,
+          semant la panique
+        </p>
+      </div>
+      <div>
+        <div class="vi"><img src="./alaune3.jpg" alt="" srcset="" /></div>
+        <p>
+          Amour, sexe, jalousie : les animaux peuvent-ils vraiment rester
+          fidèles ?
+        </p>
+      </div>
+    </div>
+    <hr />
+    <div class="voyage">
+      <div class="titrevoyage">
+        <p><span class="avant">VOYAGE</span></p>
+        <p>ENVIRONNEMENT</p>
+        <p>HISTOIRE</p>
+        <p>GEOPOLITIQUE</p>
+      </div>
+    </div>
+    <div class="contenuvoyage">
+      <div>
+        <div class="voy"><img src="./voyage1.jpg" alt="" srcset="" /></div>
+        <p>
+          Au Canada, la plus grande patinoire du monde reste fermée, faute de
+          glace
+        </p>
+      </div>
+      <div></div>
+    </div>
+    <div class="divers">
+      <div>
+        <div class="vi"><img src="./vignette1.jpg" alt="" srcset="" /></div>
+        <p>CANADA</p>
+      </div>
+      <div>
+        <div class="vi"><img src="./vignette2.jpg" alt="" srcset="" /></div>
+        <p>SCIENCES</p>
+      </div>
+      <div>
+        <div class="vi"><img src="./vignette3.jpg" alt="" srcset="" /></div>
+        <p>DIPLOMATIE</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
