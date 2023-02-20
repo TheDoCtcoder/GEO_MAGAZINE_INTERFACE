@@ -500,6 +500,15 @@ p {
   transform: scale(1.1);
 }
 
+.divers div {
+  width: auto;
+}
+
+.divers div img {
+  width: 350px;
+  padding-right: 10px;
+}
+
 .divers p {
   padding: 0;
   font-family: "Playfair Display", serif;
@@ -513,13 +522,27 @@ p {
 
 /* ! *****************************  MEDIA QUERIES ********************************** */
 
+
+
+
 @media screen and (max-width: 510px) {
   .container li {
     display: block;
   }
 
+  .titrevoyage{
+    padding-left: 25px;
+  }
+
+div.titrevoyage p span {
+  font-size: .5rem;
+}
+div.titrevoyage p  {
+  font-size: .5rem;
+}
+
   div#survol {
-    display: flex;
+    display: none;
     color: #111111;
     position: relative;
     top: 3px;
@@ -531,9 +554,10 @@ p {
 
   .sgauche {
     padding-top: 5px;
+
     /* display: flex; */
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
   }
 
@@ -543,7 +567,8 @@ p {
   }
 
   .sgauche h4 {
-    font-size: 0.8rem;
+    padding-left: 7px;
+    font-size: 0.7rem;
     text-align: center;
   }
 
@@ -552,7 +577,7 @@ p {
     width: 90%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: left;
   }
 
@@ -562,7 +587,7 @@ p {
   }
 
   .sdroite h4 {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
 
   .pligne2 {
@@ -572,6 +597,9 @@ p {
   }
 
   div.alaune p span {
+    font-size: 1rem;
+  }
+  div.alaune p  {
     font-size: 1rem;
   }
 
@@ -620,6 +648,10 @@ p {
     margin-bottom: 10px;
   }
 
+  .parag p {
+    font-size: 0.9rem;
+  }
+
   div.titrevoyage p {
     font-size: 0.6rem;
   }
@@ -627,65 +659,10 @@ p {
     font-size: 0.6rem;
   }
 
-}
-
-@media screen and (max-width: 376px) {
-  .alauneimage div {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .alauneimage div p {
+  .divers p {
     text-align: center;
-    font-size: 0.1rem;
-  }
-  .alauneimage div p span {
-    text-align: center;
-    font-size: 0.1rem;
-  }
-}
-
-@media screen and (max-width: 410px) {
-  .container li {
-    display: block;
   }
 
-  .alauneimage div p {
-    text-align: center;
-    font-size: 0.1rem;
-  }
-  .alauneimage div p span {
-    text-align: center;
-    font-size: 0.1rem;
-  }
-}
-
-@media screen and (max-width: 456px) {
-  .gauche,
-  .droite {
-    display: none;
-  }
-
-  .alauneimage div p {
-    font-size: 0.8rem;
-  }
-
-  .alaune div p {
-    font-size: 0.8rem;
-  }
-  .alaune div p span {
-    font-size: 0.8rem;
-  }
-
-  .container ul {
-    font-size: 0.8rem;
-  }
-}
-
-@media screen and (max-width: 514px) {
-  .gauche .droite {
-    display: none;
-  }
 }
 
 @media screen and (max-width: 1085px) {
@@ -737,9 +714,46 @@ p {
     /* margin: 0; */
     position: relative;
     display: flex;
-    width: 80vw;
+    width: 100vw;
     /* background-color: #eb1717; */
   }
+
+  .alauneimage div {
+    margin: 0 auto;;
+    width: 90%;
+  }
+
+
+  .vi img {
+    width: 100%;
+  }
+
+.contenuvoyage {
+  margin: 0 auto;
+  width: 90vw;
+}
+
+.voy img {
+  width: 100%;
+}
+.voy {
+  width: 100%;
+}
+
+
+.divers  {
+  width: 90vw;
+}
+
+.divers div {
+  width: 90vw;
+}
+
+.divers div > div.vi2 > img {
+  width: 100%;
+}
+
+
 
   .pimage {
     /* background-color: #1abd43; */
@@ -845,8 +859,14 @@ p {
 }
 
 @media screen and (max-width: 962px) {
-  .pimage img {
+  .pimage {
     width: 90%;
+  }
+
+
+
+  .pimage img {
+    width: 100%;
   }
 
   .alaune {
@@ -859,11 +879,11 @@ p {
   }
 
   .alaune p span {
-    font-size: 20px;
+    font-size: 2rem;
   }
 
   .alaune p {
-    font-size: 20px;
+    font-size: 2rem;
   }
 
   .para p {
@@ -877,7 +897,80 @@ p {
   }
 }
 @media screen and (max-width: 1060px) {
+  .pimage {
+    width: 90%;
+  }
+
+
+
+  .pimage img {
+    width: 100%;
+  }
+  .divers div img {
+    width: 250px;
+    padding-right: 5px;
+  }
   .para p {
     font-size: 1.1rem;
   }
+}
+
+
+
+@media screen and (max-width:680px) {
+  
+  div.alaune p span {
+    font-size:  1.9rem;
+  }
+  div.alaune p  {
+    font-size: 1.9rem;
+  }
+  
+}
+@media screen and (max-width:621px) {
+  
+  div.alaune p span {
+    font-size:  1.5rem;
+  }
+  div.alaune p  {
+    font-size: 1.5rem;
+  }
+  
+}
+@media screen and (max-width:521px) {
+  
+  div.alaune p span {
+    font-size:  1.3rem;
+  }
+  div.alaune p  {
+    font-size: 1.3rem;
+  }
+  
+}
+@media screen and (max-width:442px) {
+  
+  div.alaune p span {
+    font-size:  1rem;
+  }
+  div.alaune p  {
+    font-size: 1rem;
+  }
+  
+}
+@media screen and (max-width:370px) {
+  
+  div.alaune p span {
+    font-size:  .7rem;
+  }
+  div.alaune p  {
+    font-size: .7rem;
+  }
+  
+}
+@media screen and (max-width:422px) {
+  
+  .container {
+    height: fit-content;
+  }
+  
 }
