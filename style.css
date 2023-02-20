@@ -516,6 +516,28 @@ p {
   font-size: 1em;
 }
 
+body > div {
+  width: 95vw;
+}
+
+div.header {
+  width: 95vw;
+}
+
+div.zoom {
+  margin: 0;
+  width: 95vw;
+}
+
+.container {
+  width: 95vw;
+}
+
+.zoom {
+  margin: 0;
+  width: 95vw;
+}
+
 /* ? test  taper ? puis commenter*/
 /* TODO: test to do list taper TODO: puis commenter  */
 /* ! test warning mettre un ! puis commenter */
@@ -526,6 +548,24 @@ p {
 
 
 @media screen and (max-width: 510px) {
+
+body > div {
+  width: 95vw;
+}
+
+.header {
+  width: 95vw;
+}
+
+div.zoom {
+  margin: 0;
+  width: 95vw;
+}
+
+.container {
+  width: 95vw;
+}
+
   .container li {
     display: block;
   }
