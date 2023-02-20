@@ -310,7 +310,7 @@ p {
   position: absolute;
   top: 40%;
   left: 50%;
-  transform: translateX(-50%); 
+  transform: translateX(-50%);
   /* transform: translateY(30%);  */
   background-color: rgba(11, 11, 11, 0.6);
   padding: 10px;
@@ -507,6 +507,187 @@ p {
   font-size: 1em;
 }
 
+/* ? test  taper ? puis commenter*/
+/* TODO: test to do list taper TODO: puis commenter  */
+/* ! test warning mettre un ! puis commenter */
+
+/* ! *****************************  MEDIA QUERIES ********************************** */
+
+@media screen and (max-width: 510px) {
+  .container li {
+    display: block;
+  }
+
+  div#survol {
+    display: flex;
+    color: #111111;
+    position: relative;
+    top: 3px;
+    width: 100vw;
+    height: fit-content;
+    overflow: hidden;
+    background-color: #1e1f1d;
+  }
+
+  .sgauche {
+    padding-top: 5px;
+    /* display: flex; */
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .sgauche p {
+    width: 80%;
+    font-size: 0.6rem;
+  }
+
+  .sgauche h4 {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+
+  .sdroite {
+    padding-top: 5px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: left;
+  }
+
+  .sdroite p {
+    width: 80%;
+    font-size: 0.6rem;
+  }
+
+  .sdroite h4 {
+    font-size: 0.8rem;
+  }
+
+  .pligne2 {
+    display: flex;
+    position: relative;
+    font-size: 0.6em;
+  }
+
+  div.alaune p span {
+    font-size: 1rem;
+  }
+
+  .header .centre {
+    margin: 0 auto;
+  }
+
+  .gauche {
+    display: none;
+  }
+
+  .header .droite {
+    display: none;
+  }
+
+  .alauneimage .vi {
+    width: 100vw;
+    height: fit-content;
+  }
+
+  .alauneimage img:hover {
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+  }
+
+  .alauneimage {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .alauneimage img {
+    width: 80%;
+    height: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+
+  div.parag {
+    text-align: left;
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    margin-bottom: 10px;
+  }
+
+  div.titrevoyage p {
+    font-size: 0.6rem;
+  }
+  div.titrevoyage span {
+    font-size: 0.6rem;
+  }
+
+}
+
+@media screen and (max-width: 376px) {
+  .alauneimage div {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .alauneimage div p {
+    text-align: center;
+    font-size: 0.1rem;
+  }
+  .alauneimage div p span {
+    text-align: center;
+    font-size: 0.1rem;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .container li {
+    display: block;
+  }
+
+  .alauneimage div p {
+    text-align: center;
+    font-size: 0.1rem;
+  }
+  .alauneimage div p span {
+    text-align: center;
+    font-size: 0.1rem;
+  }
+}
+
+@media screen and (max-width: 456px) {
+  .gauche,
+  .droite {
+    display: none;
+  }
+
+  .alauneimage div p {
+    font-size: 0.8rem;
+  }
+
+  .alaune div p {
+    font-size: 0.8rem;
+  }
+  .alaune div p span {
+    font-size: 0.8rem;
+  }
+
+  .container ul {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 514px) {
+  .gauche .droite {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 1085px) {
   .titrevoyage p:first-child {
     font-size: 30px;
@@ -569,13 +750,13 @@ p {
     width: 100%;
   }
 
-.para {
+  .para {
     width: 80%;
     position: absolute;
     top: 30%;
     left: 50%;
     transform: translateX(-50%);
-}
+  }
 
   .para p {
     text-align: center;
@@ -687,17 +868,16 @@ p {
 
   .para p {
     font-size: 1rem;
-}
+  }
 }
 
-
-@media screen and   ( max-width: 1474px) {
-    .para p {
-        font-size: 1.3rem;
-    }
+@media screen and (max-width: 1474px) {
+  .para p {
+    font-size: 1.3rem;
+  }
 }
-@media screen and   ( max-width: 1060px) {
-    .para p {
-        font-size: 1.1rem;
-    }
+@media screen and (max-width: 1060px) {
+  .para p {
+    font-size: 1.1rem;
+  }
 }
